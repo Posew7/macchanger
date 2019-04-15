@@ -8,7 +8,8 @@ print("""
 secim = input("Yapmak İstediğiniz İşlemi Seçin : ")
 print("")
 interface = input("Değiştirmek İstediğiniz Interface Girin : ")
-print("")
+print(""
+      "")
 subprocess.call(["ifconfig",interface,"down"])
 if (secim=="1"):
     subprocess.call(["macchanger","-r",interface])
