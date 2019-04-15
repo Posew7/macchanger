@@ -1,20 +1,17 @@
 import subprocess
 
-interface = input("Değiştirmek İstediğiniz Interface Girin : ")
-
-secim = input("""
+print("""
 1 - Random Mac
 2 - Default Mac
-
 """)
 
+secim = input("Yapmak İstediğiniz İşlemi Seçin : ")
+print("")
+interface = input("Değiştirmek İstediğiniz Interface Girin : ")
+print("")
 subprocess.call(["ifconfig",interface,"down"])
-
 if (secim=="1"):
     subprocess.call(["macchanger","-r",interface])
-elif (secim=="2"):
-    subprocess.call(["macchanger","-p",interface])
 else:
-    print("HATA")
-
+    subprocess.call(["macchanger","-p",interface])
 subprocess.call(["ifconfig",interface,"up"])
