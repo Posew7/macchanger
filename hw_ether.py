@@ -1,5 +1,6 @@
 import subprocess
 import optparse
+import re
 
 def get_user_input():
     parse = optparse.OptionParser()
