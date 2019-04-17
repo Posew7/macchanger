@@ -23,4 +23,9 @@ def control_new_mac(interface):
 
 (user_inputs,arguments) = get_user_input()
 change_mac_address(user_inputs.interface,user_inputs.mac_address)
-control_new_mac(user_inputs.interface)
+final_mac = control_new_mac(user_inputs.interface,user_inputs.mac_address)
+
+if (final_mac == user_inputs.mac_address):
+    print("Başarı ile Mac Adresi Değişti")
+else:
+    print("Başarısız Mac Adresi Değişmedi")
